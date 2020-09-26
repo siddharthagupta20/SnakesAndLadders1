@@ -9,7 +9,22 @@ public class SnakesAndLadders {
 		Random rand = new Random();
 		int dice = rand.nextInt(6) + 1;
 
-		System.out.println("No. on Dice: " + dice);
+		int option = rand.nextInt(3);
+		switch (option) {
+		case 0:
+			System.out.println("No Play.");
+			break;
+		case 1:
+			System.out.println("Ladder.");
+			pos = pos + dice;
+			break;
+		case 2:
+			System.out.println("Snake.");
+			pos = pos - dice;
+			break;
+
+		}
+		System.out.println("New Position: " + pos);
 
 	}
 
